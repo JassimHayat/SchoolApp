@@ -8,13 +8,21 @@
     <title>SchoolApp</title>
   </head>
   <body>
-  
-    <h1>Welcome to the School Application </h1>
-    <p>An Application use to tracke Students status</p>
-      <a href="/auth/sign-up">Sign up</a> or
-      <a href="/auth/sign-in">Sign in</a>.
-    
-  
+
+
+
+    <% if (user) { %>
+      <h1>Welcome to the School Application, <%= user.username %>!</h1>
+        <a href="/auth/sign-out">Sign out</a>
+      <% } else { %>
+      <h1>Welcome to the School Application</h1>
+      <p>An Application use to tracke students status</p>
+      <p>
+        <a href="/auth/sign-up">Sign up</a> or
+        <a href="/auth/sign-in">Sign in</a>.
+      </p>
+      <% } %>
+
    
   </body>
 </html>
