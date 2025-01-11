@@ -10,6 +10,7 @@ require('./config/database');
 // Controllers
 const authController = require('./controllers/auth');
 const isSignedIn = require('./middleware/isSignedIn');
+const applicationsController = require('./controllers/applications.js');
 
 const app = express();
 // Set the port from environment variable or default to 3000
@@ -37,22 +38,20 @@ app.use(
 app.use(addUserToViews);
 
 // Public Routes
+
 app.get('/', (req, res) => {
-  res.render('index.ejs', {
-    user: req.session.user,
-  });
+  // Check if the user is signed in
+  if (req.session.user) {
+    // Redirect signed-in users to their applications index
+    res.redirect(`/users/${req.session.user._id}/applications`);
+  } else {
+    // Show the homepage for users who are not signed in
+    res.render('index.ejs');
+  }
 });
 
 
-app.use('/auth', authController);
-
-
-
-// Protected Routes
-app.use(isSignedIn);
-
-
-
+/*
 app.get('/protected', async (req, res) => {
   if (req.session.user) {
     res.send(`Welcome to the party ${req.session.user.username}.`);
@@ -62,8 +61,12 @@ app.get('/protected', async (req, res) => {
   }
 });
 
+*/
 
-
+app.use('/auth', authController);
+// Protected Routes
+app.use(isSignedIn);
+app.use('/users/:userId/applications', applicationsController);
 
 
 app.listen(port, () => {
