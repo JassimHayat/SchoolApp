@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a New School</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add a New School</h1>
+
+
+    <form action="/schools" method="POST">
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+      
+        <label for="email">Email:</label>
+        <textarea name="email" id="email"></textarea>
+      
+        <label for="note">Notes:</label>
+        <textarea name="note" id="note"></textarea> 
+        <button type="submit">Add School</button>
+      </form>
+
+
+  </body>
+</html>

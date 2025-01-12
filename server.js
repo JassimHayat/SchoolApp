@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
   // Check if the user is signed in
   if (req.session.user) {
     // Redirect signed-in users to their applications index
-    res.redirect(`/users/${req.session.user._id}/applications`);
+    res.redirect(`/schools`);
   } else {
     // Show the homepage for users who are not signed in
     res.render('index.ejs');
@@ -66,7 +66,7 @@ app.get('/protected', async (req, res) => {
 app.use('/auth', authController);
 // Protected Routes
 app.use(isSignedIn);
-app.use('/users/:userId/applications', applicationsController);
+app.use('/schools', applicationsController);
 
 
 app.listen(port, () => {
