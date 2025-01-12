@@ -8,7 +8,7 @@ const studentSchema = new mongoose.Schema({
   email: {
     type: String,
   },
-  note: {
+  notes: {
     type: String,
   },
   status: {
@@ -27,10 +27,10 @@ const schoolSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  email: {
+  location: {
     type: String,
   },
-  note: {
+  notes: {
     type: String,
   },
   students: [studentSchema]
