@@ -7,19 +7,30 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Add New School</h1>
+    <h1>Add New student</h1>
 
 
-    <form action="/schools" method="POST">
+    <form action="/student" method="POST">
 
-        <label for="name"> School Name:</label>
+        <label for="name"> Student Name:</label>
         <input type="text" name="name" id="name" />
       
-        <label for="location">Location:</label>
+        <label for="email">Email:</label>
         <textarea name="email" id="email"></textarea>
+
+    
       
-        <label for="note">Notes:</label>
-        <textarea name="note" id="note"></textarea> 
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes"></textarea> 
+
+        <label for="school">School:</label>
+        <select id="school" name="school">
+          <option value="ABG">ABG</option>
+          <option value="Bahrain">Bahrain</option>
+          <option value="AlNoor">AlNoor</option>
+         
+        </select>
+
         <button type="submit">Add School</button>
       </form>
 

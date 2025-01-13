@@ -11,31 +11,14 @@ const studentSchema = new mongoose.Schema({
   notes: {
     type: String,
   },
-  status: {
-    type: String,
-    enum: ['Primary Level', 'Secondary Level','Graduated', 'Dismissal'],
-  }
 
+  school: {
+    type: String,
+    enum: ['ABG','Bahrain', 'AlNoor'],
+  },
 
 })
 
-//This is for the school
-const schoolSchema = new mongoose.Schema({
 
 
-  name: {
-    type: String,
-    required: true,
-  },
-  location: {
-    type: String,
-  },
-  notes: {
-    type: String,
-  },
-  students: [studentSchema]
-
-
-})
-
-module.exports = mongoose.model('School', schoolSchema);
+module.exports = mongoose.model('School', studentSchema);

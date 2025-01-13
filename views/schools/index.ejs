@@ -9,14 +9,25 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Schools List</h1>
+
+    <% if (user) { %>
+      <h1>Welcome to the School Application, <%= user.username %>!</h1>
+      
+
+      <% } else { %>
+      <h1>Welcome to the School Application</h1>
+      <p>School Applications is designed to help schools administrator to add,manage and update Student informations.</p>
+      
+
+      </p>
+      <% } %>
     Please Select The School
     <ul>
+    
+      <li><a href="/schools/alNoor">Al Noor School</a></li>
+      <li><a href="/">Bahrain School</a></li>
+      <li><a href="/">APG School</a></li>
       
-      <% schools.forEach((school)=>{ %>
-        <li><%= school.name %></li>
-        <% }) %>
-
     </ul>
   </body>
 </html>

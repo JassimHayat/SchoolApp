@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-
-
 //This is for the user
 const userSchema = new mongoose.Schema({
 
@@ -17,10 +15,5 @@ const userSchema = new mongoose.Schema({
   },
 
 });
-
-
-
-
-
 
 module.exports = mongoose.model('UserProject', userSchema);

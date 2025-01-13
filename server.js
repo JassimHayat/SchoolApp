@@ -7,10 +7,12 @@ const addUserToViews = require('./middleware/addUserToViews');
 require('dotenv').config();
 require('./config/database');
 
+
 // Controllers
 const authController = require('./controllers/auth');
 const isSignedIn = require('./middleware/isSignedIn');
 const applicationsController = require('./controllers/applications.js');
+const School = require("./models/school.js");
 
 const app = express();
 // Set the port from environment variable or default to 3000
@@ -51,6 +53,46 @@ app.get('/', (req, res) => {
 });
 
 
+app.get('/schools/alNoor', async (req, res) => {
+
+  const studentList = await School.find({school: "AlNoor"})
+
+  res.render('schools/alNoor.ejs', {students: studentList});
+ 
+});
+
+
+app.get('/student/:studentId', async (req, res) => {
+
+  res.send("Test")
+ 
+  }
+);
+
+app.get('/new', async (req, res) => {
+  res.render('schools/new.ejs');
+});
+
+
+
+
+app.post('/student', async (req, res) => {
+  try {
+    // Look up the user from req.session
+    const student = new School(req.body)
+    // Push req.body (the new form data object) to the
+    // applications array of the current user
+    // Save changes to the user
+    await student.save();
+    // Redirect back to the applications index view
+    res.redirect(`/schools`);
+  } catch (error) {
+    // If any errors, log them and redirect back home
+    console.log(error);
+    res.redirect('/');
+  }
+});
+
 /*
 app.get('/protected', async (req, res) => {
   if (req.session.user) {
@@ -60,7 +102,6 @@ app.get('/protected', async (req, res) => {
     // res.send('Sorry, no guests allowed.');
   }
 });
-
 */
 
 app.use('/auth', authController);
