@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a New Student</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Students of Bahrain school</h1>
+<ul>
+   <% students.forEach((student)=>{ %>
+    <li>
+        <a href="/student/<%=student._id %>">
+        <%=student.name%>
+    </a>
+    </li>
+   <% })%>
+</ul>
+    <a href="/new">Add Students</a>
+  </body>
+</html>

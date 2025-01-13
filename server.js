@@ -61,13 +61,33 @@ app.get('/schools/alNoor', async (req, res) => {
  
 });
 
+app.get('/schools/apg', async (req, res) => {
+
+  const studentList = await School.find({school: "apg"})
+
+  res.render('schools/apg.ejs', {students: studentList});
+ 
+});
+
+app.get('/schools/bahrain', async (req, res) => {
+
+  const studentList = await School.find({school: "bahrain"})
+
+  res.render('schools/bahrain.ejs', {students: studentList});
+ 
+});
+
 
 app.get('/student/:studentId', async (req, res) => {
 
-  res.send("Test")
+  res.render('schools/edit.ejs');
  
   }
+  
 );
+
+////for
+
 
 app.get('/new', async (req, res) => {
   res.render('schools/new.ejs');
