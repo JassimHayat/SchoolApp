@@ -1,0 +1,15 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Alkalami');
+
+
+body {
+    font-family: 'Alkalami';
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #9b9d9f;
+  }
+
+  
