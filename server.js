@@ -11,7 +11,7 @@ require('./config/database');
 // Controllers
 const authController = require('./controllers/auth');
 const isSignedIn = require('./middleware/isSignedIn');
-const applicationsController = require('./controllers/applications.js');
+const studentController = require('./controllers/student.js');
 const School = require("./models/school.js");
 
 const app = express();
@@ -41,6 +41,13 @@ app.use(addUserToViews);
 
 // Public Routes
 
+app.use('/auth', authController);
+// Protected Routes
+app.use(isSignedIn);
+
+app.use("/", studentController)
+
+
 app.get('/', (req, res) => {
   // Check if the user is signed in
   if (req.session.user) {
@@ -53,108 +60,6 @@ app.get('/', (req, res) => {
 });
 
 
-app.get('/schools/alNoor', async (req, res) => {
-
-  const studentList = await School.find({school: "AlNoor"})
-
-  res.render('schools/alNoor.ejs', {students: studentList});
- 
-});
-
-app.get('/schools/apg', async (req, res) => {
-
-  const studentList = await School.find({school: "apg"})
-
-  res.render('schools/apg.ejs', {students: studentList});
- 
-});
-
-app.get('/schools/bahrain', async (req, res) => {
-
-  const studentList = await School.find({school: "bahrain"})
-
-  res.render('schools/bahrain.ejs', {students: studentList});
- 
-});
-
-
-///SHOW
-app.get('/student/:studentId/show', async (req, res) => {
-  
-  const student = await School.findById(req.params.studentId);
-  res.render('schools/show.ejs', {student: student})
- 
-  }
-  
-);
-
-//EDIT PAGE
-app.get('/student/:studentId/edit', async (req, res) => {
-  
-  const student = await School.findById(req.params.studentId);
-  res.render('schools/edit.ejs', {student: student}); 
-  }
-  
-);
-
-//UPDATE
-app.put('/student/:studentId/update', async (req, res) => {
-  try {
-    const student = await School.findById(req.params.studentId);
-    //console.log(req.body);
-    student.set(req.body);
-    // Save the current user
-    await student.save();
-    // Redirect back to the applications index view
-    res.redirect(`/schools`);
-  } catch (error) {
-    // If any errors, log them and redirect back home
-    console.log(error);
-    res.redirect('/');
-  }
-});
-
-//DELETE
-app.delete('/student/:studentId/delete', async (req, res) => {
-  try {
-    const student = await School.findByIdAndDelete(req.params.studentId);
-    //student.deleteOne();
-    await student.save();
-    // Redirect back to the applications index view
-    res.redirect(`/schools`);
-  } catch (error) {
-    // If any errors, log them and redirect back home
-    console.log(error);
-    res.redirect('/');
-  }
-});
-
-
-
-app.get('/new', async (req, res) => {
-  res.render('schools/new.ejs');
-});
-
-
-
-
-app.post('/student', async (req, res) => {
-  try {
-    // Look up the user from req.session
-    const student = new School(req.body)
-    // Push req.body (the new form data object) to the
-    // applications array of the current user
-    // Save changes to the user
-    await student.save();
-    // Redirect back to the applications index view
-    res.redirect(`/schools`);
-  } catch (error) {
-    // If any errors, log them and redirect back home
-    console.log(error);
-    res.redirect('/');
-  }
-});
-
 /*
 app.get('/protected', async (req, res) => {
   if (req.session.user) {
@@ -166,10 +71,7 @@ app.get('/protected', async (req, res) => {
 });
 */
 
-app.use('/auth', authController);
-// Protected Routes
-app.use(isSignedIn);
-app.use('/schools', applicationsController);
+
 
 
 app.listen(port, () => {

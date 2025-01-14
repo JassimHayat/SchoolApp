@@ -14,11 +14,10 @@ const studentSchema = new mongoose.Schema({
 
   school: {
     type: String,
-    enum: ['ABG','Bahrain', 'AlNoor'],
+    enum: ['APG','Bahrain', 'AlNoor'],
   },
 
 })
-
 
 
 module.exports = mongoose.model('School', studentSchema);

@@ -1,0 +1,45 @@
+<!-- views/applications/edit.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+</head>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <h1>Show Student Informations</h1>
+
+  <div>
+
+    Name: <%= student.name %>
+  </div>
+  <div>
+
+    Email: <%= student.email %>
+
+  </div>
+
+<div>
+  Notes:<%= student.notes %>
+</div>
+
+  School: <%= student.school %>
+  
+
+  </select>
+  <button type="submit">
+    <a href="/student/<%=student._id %>/edit">Edit Student</a>
+  </button>
+<form
+action="/student/<%=student._id %>/delete?_method=DELETE" method="POST"
+    >
+    <div style="padding-top: 20px;">
+      <button type="submit">Delete this Student</button>
+    </div>  
+    
+</form>
+
+</body>
+</html>
