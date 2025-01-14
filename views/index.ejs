@@ -8,19 +8,18 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>SchoolApp</title>
   </head>
-  <body class="index-body">
+  <body>
     
     <%- include('./partials/_navbar.ejs') %>
-    <div class="index-container">
-      <div class="text-container">
+   
     <% if (user) { %>
-      <h1 class="main-header">Welcome to the School Application, <%= user.username %>!</h1>
+      <h1>Welcome to the School Application, <%= user.username %>!</h1>
       
         <a href="/auth/sign-out">Sign out</a>
       <% } else { %>
-      <h1 class="main-header">Welcome to the School Application</h1>
-      <p class="subheader">School Applications is designed to help schools administrator to add,manage and update Student informations.</p>
-    </div>
+      <h1>Welcome to the Schools Application</h1>
+      <p>School Applications is designed to help schools administrator to add,manage and update Student informations.</p>
+ 
 
       </p>
       <% } %>
