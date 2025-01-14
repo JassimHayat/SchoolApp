@@ -5,15 +5,8 @@ Add pic
 
 
 ## About School Application
-- [Prerequisites](#prerequisites)
-- [Clone the Repository](#clone-the-repository)
-- [Installation](#installation)
-- [Environment Setup](#environment-setup)
-- [Running the Application](#running-the-application)
-- [Removing Git and Creating Your Own Repo](#removing-git-and-creating-your-own-repo)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
+School Application designed for school administrators to efficiently manage and track students information through the specific features.
+
 
 ## Prerequisites
 
