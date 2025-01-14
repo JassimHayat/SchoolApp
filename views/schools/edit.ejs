@@ -11,27 +11,47 @@
   <%- include('../partials/_navbar.ejs') %>
   <h1>Edit student informations</h1>
 
-
-  <form action="/student/edit" method="POST">
+  <form 
+  action="/student/<%=student._id %>/update?_method=PUT"
+  method="POST">
 
   <label for="name"> Student Name:</label>
-  <input type="text" name="name" id="name" />
+  <input type="text" name="name" id="name" value = "<%= student.name %>"/>
 
   <label for="email">Email:</label>
-  <textarea name="email" id="email"></textarea>
+  <input name="email" id="email" value = "<%= student.email %>"/>
 
   <label for="notes">Notes:</label>
-  <textarea name="notes" id="notes"></textarea> 
+  <input name="notes" id="notes" value = "<%= student.notes %>"/> 
 
   <label for="school">School:</label>
+
   <select id="school" name="school">
-    <option value="ABG">ABG</option>
-    <option value="Bahrain">Bahrain</option>
-    <option value="AlNoor">AlNoor</option>
-   
+    <option
+      value="Bahrain"
+      <%= student.school === "Bahrain" ? "selected" : "" %>
+    >
+    Bahrain
+  </option>
+
+    <option
+      value="AlNoor"
+      <%= student.school === "AlNoor" ? "selected" : "" %>
+    >
+      AlNoor
+    </option>
+
+    <option
+      value="APG"
+      <%= student.school === "APG" ? "selected" : "" %>
+    >
+    APG
+    </option>
   </select>
 
-  <button type="submit">Add Student</button>
+  <button type="submit">
+    Update
+  </button>
 </form>
 
 </body>

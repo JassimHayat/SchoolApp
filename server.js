@@ -78,15 +78,57 @@ app.get('/schools/bahrain', async (req, res) => {
 });
 
 
-app.get('/student/:studentId', async (req, res) => {
-
-  res.render('schools/edit.ejs');
+///SHOW
+app.get('/student/:studentId/show', async (req, res) => {
+  
+  const student = await School.findById(req.params.studentId);
+  res.render('schools/show.ejs', {student: student})
  
   }
   
 );
 
-////for
+//EDIT PAGE
+app.get('/student/:studentId/edit', async (req, res) => {
+  
+  const student = await School.findById(req.params.studentId);
+  res.render('schools/edit.ejs', {student: student}); 
+  }
+  
+);
+
+//UPDATE
+app.put('/student/:studentId/update', async (req, res) => {
+  try {
+    const student = await School.findById(req.params.studentId);
+    //console.log(req.body);
+    student.set(req.body);
+    // Save the current user
+    await student.save();
+    // Redirect back to the applications index view
+    res.redirect(`/schools`);
+  } catch (error) {
+    // If any errors, log them and redirect back home
+    console.log(error);
+    res.redirect('/');
+  }
+});
+
+//DELETE
+app.delete('/student/:studentId/delete', async (req, res) => {
+  try {
+    const student = await School.findByIdAndDelete(req.params.studentId);
+    //student.deleteOne();
+    await student.save();
+    // Redirect back to the applications index view
+    res.redirect(`/schools`);
+  } catch (error) {
+    // If any errors, log them and redirect back home
+    console.log(error);
+    res.redirect('/');
+  }
+});
+
 
 
 app.get('/new', async (req, res) => {

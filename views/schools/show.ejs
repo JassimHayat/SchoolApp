@@ -1,0 +1,66 @@
+<!-- views/applications/edit.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+</head>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <h1>Show student informations</h1>
+
+
+  <form action="/student/<%=student._id %>/delete?_method=DELETE" method="POST">
+
+  <label for="name"> Student Name:</label>
+  <input type="text" name="name" id="name" value = "<%= student.name %>" readonly/>
+
+  <label for="email">Email:</label>
+  <input name="email" id="email" value = "<%= student.email %>" readonly/>
+
+  <label for="notes">Notes:</label>
+  <input name="notes" id="notes" value = "<%= student.notes %>" readonly/> 
+
+  <label for="school">School:</label>
+
+  <select id="school" name="school" disabled>
+    <option
+      value="Bahrain"
+      <%= student.school === "Bahrain" ? "selected" : "" %>
+    >
+    Bahrain
+  </option>
+
+    <option
+      value="AlNoor"
+      <%= student.school === "AlNoor" ? "selected" : "" %>
+    >
+      AlNoor
+    </option>
+
+    <option
+      value="APG"
+      <%= student.school === "APG" ? "selected" : "" %>
+    >
+    APG
+    </option>
+  </select>
+
+  <button type="submit">
+    <a href="/student/<%=student._id %>/edit">Edit Student</a>
+  </button>
+</form>
+
+<form
+action="/student/<%=student._id %>/delete?_method=DELETE" method="POST"
+    >
+    <div style="padding-top: 20px;">
+      <button type="submit">Delete this Student</button>
+    </div>  
+    
+</form>
+
+</body>
+</html>

@@ -54,21 +54,25 @@ router.post('/', async (req, res) => {
 
 
 
-/*
-router.get('/', async (req, res) => {
+router.get('/show', async (req, res) => {
   try {
     // find the user
     const currentUser = await User.findById(req.session.user._id);
 
-    res.render('applications/index.ejs', {
-      applications: currentUser.applications,
+    const school = currentUser.schools.id(req.params.studentId);
+
+    console.log("test");
+    console.log(school.name);
+
+    res.render('schools/show.ejs', {
+      schools: school,
     });
   } catch (error) {
     console.log(error);
     res.redirect('/');
   }
 });
-*/
+
 
 /*
 /*
