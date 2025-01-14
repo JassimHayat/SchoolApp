@@ -1,6 +1,6 @@
-# School Application
+# MEN Stack Starter Template with Session Authentication
 
-Welcome to the School Application! This template provides a foundational setup for building web applications using MongoDB, Express.js, and Node.js, complete with session authentication. This is ideal for students looking to kickstart their development projects.
+Welcome to the MEN Stack Starter Template! This template provides a foundational setup for building web applications using MongoDB, Express.js, and Node.js, complete with session authentication. This is ideal for students looking to kickstart their development projects.
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
