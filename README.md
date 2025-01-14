@@ -5,7 +5,6 @@
 # <h2> About School Application
 School Application designed for school administrators to efficiently manage and track students information through the specific features.
 
-
 # <h2> Technologies Used
 
 * **EJS**
@@ -15,8 +14,6 @@ School Application designed for school administrators to efficiently manage and 
 * **Visual Studio**
 * **HTML5**
 * **NodeJS**
-
-
 
 ## Next Steps
 
