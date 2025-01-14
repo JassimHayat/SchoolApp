@@ -10,7 +10,7 @@ School Application designed for school administrators to efficiently manage and 
 
 * **EJS**
 * **MongoBD**
-* *CSS**
+* **CSS**
 * **Javascript**
 * **Visual Studio**
 * **HTML5**
