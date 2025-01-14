@@ -1,10 +1,8 @@
 # School Application
 
+![photo](URL)
 
-Add pic
-
-
-## About School Application
+## <h2> About School Application
 School Application designed for school administrators to efficiently manage and track students information through the specific features.
 
 
