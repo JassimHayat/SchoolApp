@@ -1,6 +1,6 @@
 # School Application
 
-![photo]([URL](https://i.imgur.com/rSttH0E.png))
+!(https://i.imgur.com/rSttH0E.png)
 
 ## <h2> About School Application
 School Application designed for school administrators to efficiently manage and track students information through the specific features.
