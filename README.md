@@ -1,4 +1,4 @@
-# MEN Stack Starter Template with Session Authentication
+# School Application
 
 Welcome to the MEN Stack Starter Template! This template provides a foundational setup for building web applications using MongoDB, Express.js, and Node.js, complete with session authentication. This is ideal for students looking to kickstart their development projects.
 
