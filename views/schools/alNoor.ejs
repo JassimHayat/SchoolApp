@@ -9,7 +9,8 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Students of AlNoor school</h1>
-<ul>
+  <h3>Student List:</h3>
+    <ul>
    <% students.forEach((student)=>{ %>
     <li>
         <a href="/student/<%=student._id %>/show">

@@ -11,33 +11,35 @@
 <body>
   <%- include('../partials/_navbar.ejs') %>
   <h1>Show Student Informations</h1>
-
-  <div>
+  <div id="detailsDiv">
+  <div class="details">
 
     Name: <%= student.name %>
   </div>
-  <div>
+  <div class="details">
 
     Email: <%= student.email %>
 
   </div>
 
-<div>
+  <div class="details">
   Notes:<%= student.notes %>
 </div>
-
+<div class="details" id="lastDetails">
   School: <%= student.school %>
-  
+</div>
+</div>  
 
   </select>
-  <button type="submit">
-    <a href="/student/<%=student._id %>/edit">Edit Student</a>
+  <button type="submit" id="editButton">
+    <a id ="editButton" href="/student/<%=student._id %>/edit">Edit Student</a>
   </button>
 <form
+id="deleteDiv"
 action="/student/<%=student._id %>/delete?_method=DELETE" method="POST"
     >
-    <div style="padding-top: 20px;">
-      <button type="submit">Delete this Student</button>
+    <div>
+      <button id="deleteButton" type="submit">Delete Student</button>
     </div>  
     
 </form>
