@@ -27,7 +27,7 @@ Welcome to the School Application! This template provides a foundational setup f
 
 ----------
 
-## Next Steps
+### Next Steps
 
 - Add more schools in application.
 - Add extra features in students information. 
