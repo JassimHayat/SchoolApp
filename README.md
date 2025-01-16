@@ -2,96 +2,31 @@
 
 Welcome to the School Application! This template provides a foundational setup for building web applications using MongoDB, Express.js, and Node.js, complete with session authentication. This is ideal for students looking to kickstart their development projects.
 
-## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Clone the Repository](#clone-the-repository)
-- [Installation](#installation)
-- [Environment Setup](#environment-setup)
-- [Running the Application](#running-the-application)
-- [Removing Git and Creating Your Own Repo](#removing-git-and-creating-your-own-repo)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
+![Screenshot]()
 
-## Prerequisites
+----------
+### How to Use the Application
 
-Before you begin, ensure you have the following installed on your machine:
-- [Node.js](https://nodejs.org/) (LTS or later)
-- [MongoDB](https://www.mongodb.com/) (make sure it's running)
-- [Git](https://git-scm.com/) (for cloning the repository)
+1. Log in or Sign up to create an user account
+2. User have to select one of school's display in the application.
+3. Add new student click in on of the school's.
+4. fill up the student details then Click "Add new studnet".
+5. Once student created, user allow to delete/edit student information, plus to move the student from current school to other school exist in the application.
 
-## Clone the Repository
+## Attributions
 
-To clone this repository, open your terminal and run:
+-   [Poppins Font](https://fonts.google.com/specimen/Poppins?selection.family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900)
 
-```bash
-git clone https://github.com/SEB-1-Bahrain/instructor-men-auth.git men-stack-starter-template
-```
+## Technologies Used
 
-## Installation
-Navigate into the cloned directory:
-```bash
-cd men-stack-starter-template
-```
+![HTML](https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=white&style=flat-square)  
+![CSS](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=white&style=flat-square)  
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat-square)
 
-Then, install the necessary dependencies:
+----------
 
-```bash
-npm i
-```
+## Next Steps
 
-## Environment Setup
-```plaintext
-MONGODB_URI=atlas_db_uri
-SESSION_SECRET=your_secret_key
-SALT_ROUNDS=10
-```
-Replace `atlas_db_uri` with your desired database name and `your_secret_key` with a secure key.
-
-## Removing Git and Creating Your Own Repo
-To remove the existing Git history and create your own repository:
-
-1. Remove the existing .git folder:
-  ```bash
-  rm -rf .git
-  ```
-2. Initialize a new Git repository:
-  ```bash
-  git init
-  ```
-3. Add all files to the new repository:
-  ```bash
-  git add .
-  ```
-4. Commit the changes
-   ```bash
-   git commit -m "Initial commit"
-   ``` 
-5. Create a new repository on GitHub (or any other platform) and follow the instructions to push your local repository.
-  Make a new repository on [GitHub](https://github.com/) named `<your-project-name>`
-  Now link your local project to your remote GitHub repo:
-  ```bash
-  git remote add origin https://github.com/<github-username>/men-stack-relating-data-lab-cookbook.git
-  git push origin main
-  ```
-
-> 🚨 Do not copy the above command. It will not work. Your GitHub username will replace `<github-username>` (including the `<` and `>`) in the URL above.
-
-## Running the application
-```bash
-npm run dev
-```
-
-## Features
-- User registration and login with session management
-- Basic CRUD operations
-- Modular file structure
-- Example routes and controllers
-- Basic user model setup
-- Middleware for templates and authorization
-- Basic authentication flow
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Happy Coding!
+- Add more schools in application.
+- Add extra features in students information. 
+  
