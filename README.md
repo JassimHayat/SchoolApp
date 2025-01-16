@@ -13,7 +13,7 @@ Welcome to the School Application! This template provides a foundational setup f
 4. fill up the student details then Click "Add new studnet".
 5. Once student created, user allow to delete/edit student information, plus to move the student from current school to other school exist in the application.
 
-   
+----------
 ## Attributions
 
 
