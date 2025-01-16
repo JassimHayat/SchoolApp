@@ -1,6 +1,6 @@
 # School Application
 
-Welcome to the School Application! This template provides a foundational setup for building web applications using MongoDB, Express.js, and Node.js, complete with session authentication. This is ideal for students looking to kickstart their development projects.
+Welcome to the School Application! This application is designed for school administrators to  manage student data and information. It provides an intuitive interface for adding, updating, transferring, and deleting student records.
 
 ![Screenshot]()
 
