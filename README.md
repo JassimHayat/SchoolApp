@@ -2,7 +2,7 @@
 
 Welcome to the School Application! This application is designed for school administrators to  manage student data and information. It provides an intuitive interface for adding, updating, transferring, and deleting student records.
 
-([https://www.imghippo.com/i/ntzk4055LXU.png](https://media-hosting.imagekit.io//1835560338f44847/Screenshot%202025-01-17%20115031.png?Expires=1831712005&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nd88H1RVDgEv9mT6gTLFIo~NfWzh32UDrS9tTjOsdjL-cX5CaPIo-8gzIScb2Z34Oc63mDgkEM13CHMpLZfPOwi-iOjF5lpdo89lom8PIU7btdFEGZKCM4k8e6pp35upYOoIa7-gioiOxRKkeqzS7yAIDAAs8GPGJO~wcib5A9PZPyFrmlmcwORM7vtN7OpTtZe4U7HAQz~PYRYcabi~Z7-kf-2Qnsm-aAysbnsKRAPe1wi6Mv11oFey2qbFk2Ehjey8QHBdBVIy9XSxp4lo7UPnnSQHi~bUrYcMUTvoYlPB2oCPn3KqB00zFQjsRkxZ8KvTiRY203GTGRlh1tjsew__))
+![Screenshot]([https://www.imghippo.com/i/ntzk4055LXU.png](https://media-hosting.imagekit.io//1835560338f44847/Screenshot%202025-01-17%20115031.png?Expires=1831712005&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nd88H1RVDgEv9mT6gTLFIo~NfWzh32UDrS9tTjOsdjL-cX5CaPIo-8gzIScb2Z34Oc63mDgkEM13CHMpLZfPOwi-iOjF5lpdo89lom8PIU7btdFEGZKCM4k8e6pp35upYOoIa7-gioiOxRKkeqzS7yAIDAAs8GPGJO~wcib5A9PZPyFrmlmcwORM7vtN7OpTtZe4U7HAQz~PYRYcabi~Z7-kf-2Qnsm-aAysbnsKRAPe1wi6Mv11oFey2qbFk2Ehjey8QHBdBVIy9XSxp4lo7UPnnSQHi~bUrYcMUTvoYlPB2oCPn3KqB00zFQjsRkxZ8KvTiRY203GTGRlh1tjsew__)
 
 ----------
 ### How to Use the Application
