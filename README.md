@@ -2,7 +2,7 @@
 
 Welcome to the School Application! This application is designed for school administrators to  manage student data and information. It provides an intuitive interface for adding, updating, transferring, and deleting student records.
 
-![Screenshot or Logo] (https://imgur.com/mqxQR0D)
+![Screenshot or Logo](https://i.imgur.com/mqxQR0D.png)
 
 ----------
 ### How to Use the Application
